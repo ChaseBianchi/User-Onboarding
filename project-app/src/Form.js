@@ -48,7 +48,7 @@ export default function Form(params){
                 <label classList='tos' htmlFor='tos'>I accept Terms of Service</label>
                 <input classList='tos' onChange={onChange} type='checkbox' id='tos' name='tos' checked={formData.tos}/>
                 <br/>
-                <button disabled={disabled}>Submit</button>
+                <button disabled={disabled}>Create Account</button>
                 <div>{errors.name}</div>
                 <div>{errors.email}</div>
                 <div>{errors.password}</div>

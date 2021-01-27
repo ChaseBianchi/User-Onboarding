@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import * as yup from 'yup'
 import schema from './validation/formSchema'
 import axios from 'axios';
+import User from './user'
 
 
 const AppDiv = styled.div`
@@ -16,6 +17,12 @@ align-items: center;
 // justify-content: center;
 color: white;
 border: 1px solid black;
+`
+const UsersDisplay = styled.div`
+  width: 80%;
+  margin: 0 10%;
+  display: flex;
+  flex-flow: row wrap;
 `
 
 const defaultData = {name: '',email: '', password: '', tos: false}
@@ -76,6 +83,14 @@ function App() {
       disabled={disabled}
       errors={formErr}
       />
+      <h2>Phone Book</h2>
+    {/* <UsersDisplay>
+      {users.map(userData=>{
+        return (
+          <User key={userData.id} userData={userData}/>
+        )
+      })}
+    </UsersDisplay> */}
     </AppDiv>
   );
 }
