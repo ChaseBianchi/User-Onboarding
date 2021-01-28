@@ -24,7 +24,7 @@ const UsersDisplay = styled.div`
   margin: 0 10%;
   display: flex;
   flex-flow: row wrap;
-  align-items: space-around;
+  // align-items: space-around;
   justify-content: left;
 `
 
@@ -86,7 +86,8 @@ function App() {
       disabled={disabled}
       errors={formErr}
       />
-      <h2>Phone Book</h2>
+      <br/>
+      <h2 style={{textDecoration: 'underline'}}>Phone Book</h2>
     {<UsersDisplay>
       {users.map(userData=>{
         return (
