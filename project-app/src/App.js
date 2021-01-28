@@ -20,9 +20,12 @@ border: 1px solid black;
 `
 const UsersDisplay = styled.div`
   width: 80%;
+  height: auto
   margin: 0 10%;
   display: flex;
   flex-flow: row wrap;
+  align-items: space-between;
+  justify-content: space-between;
 `
 
 const defaultData = {name: '',email: '', password: '', tos: false}
