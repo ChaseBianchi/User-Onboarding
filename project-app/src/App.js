@@ -24,8 +24,8 @@ const UsersDisplay = styled.div`
   margin: 0 10%;
   display: flex;
   flex-flow: row wrap;
-  align-items: space-between;
-  justify-content: space-between;
+  align-items: space-around;
+  justify-content: left;
 `
 
 const defaultData = {name: '',email: '', password: '', tos: false}
