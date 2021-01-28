@@ -45,10 +45,10 @@ export default function Form(params){
                 <input onChange={onChange} type='text' id='email' name='email' value={formData.email}/>
                 <label htmlFor='password'>Password</label>
                 <input onChange={onChange} type='text' id='password' name='password' value={formData.password}/>
-                <label classList='tos' htmlFor='tos'>I accept Terms of Service</label>
-                <input classList='tos' onChange={onChange} type='checkbox' id='tos' name='tos' checked={formData.tos}/>
+                <label htmlFor='tos'>I accept Terms of Service</label>
+                <input onChange={onChange} type='checkbox' id='tos' name='tos' checked={formData.tos}/>
                 <br/>
-                <button disabled={disabled}>Create Account</button>
+                <button id='formBtn' disabled={disabled}>Create Account</button>
                 <div>{errors.name}</div>
                 <div>{errors.email}</div>
                 <div>{errors.password}</div>
