@@ -26,7 +26,7 @@ const UsersDisplay = styled.div`
 `
 
 const defaultData = {name: '',email: '', password: '', tos: false}
-const initialFormErr = {name: '', email: '', pasword: '', tos: ''}
+const initialFormErr = {name: '', email: '', password: '', tos: ''}
 
 function App() {
   const [users, setUsers] = useState([])
@@ -35,7 +35,7 @@ function App() {
   const [disabled, setDisabled] = useState(true)
   
   const getUsers = ()=>{
-    axios.get(`https://reqres.in/api/users`).then(res=>setUsers(res.data))
+    axios.get(`https://reqres.in/api/users`).then(res=>setUsers(res.data.data))
     .catch(err=>console.log(err))
   }
   useEffect(()=>{
@@ -84,13 +84,13 @@ function App() {
       errors={formErr}
       />
       <h2>Phone Book</h2>
-    {/* <UsersDisplay>
+    {<UsersDisplay>
       {users.map(userData=>{
         return (
           <User key={userData.id} userData={userData}/>
         )
       })}
-    </UsersDisplay> */}
+    </UsersDisplay>}
     </AppDiv>
   );
 }
